@@ -2,6 +2,10 @@
     <div class="container">
         <div class="row">
             <CardList />
+            <CardList />
+            <CardList />
+            <CardList />
+            <CardList />
         </div>
     </div>
 </template>

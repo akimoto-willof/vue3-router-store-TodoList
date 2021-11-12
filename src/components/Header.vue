@@ -4,11 +4,11 @@
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
             <div class="sidebar-brand-icon rotate-n-15">
-                <i class="fas fa-laugh-wink"></i>
+                <font-awesome-icon icon="chess-rook" />
             </div>
             <div class="sidebar-brand-text mx-3">
-                SB Admin
-                <sup>2</sup>
+                TODO LIST
+                <sup>PRO</sup>
             </div>
         </a>
 
@@ -18,7 +18,7 @@
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
             <a class="nav-link" href="index.html">
-                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <font-awesome-icon icon="tachometer-alt" />
                 <span>Dashboard</span>
             </a>
         </li>
@@ -31,7 +31,7 @@
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+            <a class="nav-link collapsed" href="#" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                 <i class="fas fa-fw fa-cog"></i>
                 <span>Components</span>
             </a>
@@ -46,14 +46,7 @@
 
         <!-- Nav Item - Utilities Collapse Menu -->
         <li class="nav-item">
-            <a
-                class="nav-link collapsed"
-                href="#"
-                data-toggle="collapse"
-                data-target="#collapseUtilities"
-                aria-expanded="true"
-                aria-controls="collapseUtilities"
-            >
+            <a class="nav-link collapsed" href="#" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
                 <i class="fas fa-fw fa-wrench"></i>
                 <span>Utilities</span>
             </a>
@@ -76,14 +69,7 @@
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
-            <a
-                class="nav-link collapsed"
-                href="#"
-                data-toggle="collapse"
-                data-target="#collapsePages"
-                aria-expanded="true"
-                aria-controls="collapsePages"
-            >
+            <a class="nav-link collapsed" href="#" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
                 <i class="fas fa-fw fa-folder"></i>
                 <span>Pages</span>
             </a>
