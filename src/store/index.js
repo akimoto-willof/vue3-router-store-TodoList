@@ -4,12 +4,20 @@ export default createStore({
     state() {
         return {
             todo: {
-                title: "",
+                title: "確認",
                 detail: "",
             },
         };
     },
-    mutations: {},
-    actions: {},
+    mutations: {
+        increment(state, payload) {
+            console.log(payload);
+        },
+    },
+    actions: {
+        incrementActions({ commit }, payload) {
+            commit("increment", payload);
+        },
+    },
     modules: {},
 });
