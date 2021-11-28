@@ -4,7 +4,8 @@
     "private": true,
     "scripts": {
         "serve": "vue-cli-service serve",
-        "build": "vue-cli-service build"
+        "build": "vue-cli-service build",
+        "start": "webpack"
     },
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -17,17 +18,23 @@
         "vuex": "^4.0.0-0"
     },
     "devDependencies": {
+        "@babel/core": "^7.16.0",
+        "@babel/preset-env": "^7.16.4",
         "@vue/cli-plugin-babel": "~4.5.0",
         "@vue/cli-plugin-router": "~4.5.0",
         "@vue/cli-plugin-vuex": "~4.5.0",
         "@vue/cli-service": "~4.5.0",
         "@vue/compiler-sfc": "^3.0.0",
+        "babel-loader": "^8.2.3",
         "clean-webpack-plugin": "^4.0.0",
         "css-loader": "^6.5.1",
         "file-loader": "^6.2.0",
         "html-webpack-plugin": "^5.5.0",
+        "image-webpack-loader": "^8.0.1",
         "mini-css-extract-plugin": "^2.4.5",
+        "node-sass": "^6.0.1",
         "prettier": "^2.4.1",
+        "sass-loader": "^12.3.0",
         "style-loader": "^3.3.1",
         "url-loader": "^4.1.1",
         "webpack": "^5.64.3",

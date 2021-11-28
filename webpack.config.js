@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
+    mode: "development",
     entry: "./src/main.js",
     output: {
         path: path.resolve(__dirname, "./public"),
@@ -12,23 +13,45 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.scss/,
+                test: /\.js/,
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: "babel-loader",
+                        options: {
+                            presets: ["@babel/preset-env"],
+                        },
+                    },
+                ],
+            },
+            {
+                test: /\.(css|sass|scss)/,
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader,
                     },
                     {
                         loader: "css-loader",
+                        options: {
+                            sourceMap: true, // develop時のみ
+                        },
+                    },
+                    {
+                        loader: "sass-loader",
                     },
                 ],
             },
             {
-                test: /\.(png|jpg)/,
+                test: /\.(png|jpg|jpeg)/,
                 type: "asset/resource",
                 generator: {
                     filename: "images/[name][ext]",
                 },
-                use: [],
+                use: [
+                    {
+                        loader: "image-webpack-loader",
+                    },
+                ],
             },
         ],
     },
