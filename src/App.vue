@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import Header from "@/components/Header.vue";
+import Header from "./components/Header.vue";
 import AppNavi from "./components/AppNavi.vue";
 
 export default {

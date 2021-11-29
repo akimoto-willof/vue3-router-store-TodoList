@@ -1,7 +1,10 @@
 const path = require("path");
+const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const { VueLoaderPlugin } = require("vue-loader");
+
 
 module.exports = {
     mode: "development",
@@ -13,7 +16,16 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js/,
+                test: /\.vue$/,
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: "vue-loader",
+                    },
+                ],
+            },
+            {
+                test: /\.js$/,
                 exclude: /node_modules/,
                 use: [
                     {
@@ -56,6 +68,7 @@ module.exports = {
         ],
     },
     plugins: [
+        new VueLoaderPlugin(),
         new HtmlWebpackPlugin({
             template: "./src/index.html",
         }),
@@ -63,5 +76,9 @@ module.exports = {
             filename: "./assets/style.css",
         }),
         new CleanWebpackPlugin(),
+        new webpack.DefinePlugin({
+            __VUE_OPTIONS_API__: true,
+            __VUE_PROD_DEVTOOLS__: false,
+        }),
     ],
 };

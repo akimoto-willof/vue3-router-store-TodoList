@@ -1,25 +1,25 @@
-// import { createApp } from "vue";
-// import App from "./App.vue";
-// import router from "./router";
-// import store from "./store";
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "./router";
+import store from "./store";
 
 // font awesome
-// import { library, dom } from "@fortawesome/fontawesome-svg-core";
-// import { fas, faLeaf } from "@fortawesome/free-solid-svg-icons";
-// import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { library, dom } from "@fortawesome/fontawesome-svg-core";
+import { fas, faLeaf } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 // bootstrap
-// import "bootstrap/dist/css/bootstrap.min.css";
-// import "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap";
 
 // SB Admin
-// import "./assets/vendor/sb-admin-2.min.css";
+import "./assets/vendor/sb-admin-2.min.css";
 
 // アイコンをライブラリに追加して、DOM経由（class）で参照できるようにする。
-// library.add(fas, faLeaf);
-// dom.watch();
+library.add(fas, faLeaf);
+dom.watch();
 
-// createApp(App).component("font-awesome-icon", FontAwesomeIcon).use(store).use(router).mount("#app");
-import "./assets/scss/style.scss"
+createApp(App).component("font-awesome-icon", FontAwesomeIcon).use(store).use(router).mount("#app");
+import "./assets/scss/style.scss";
 
-console.log("hello")
+console.log("hello");
