@@ -11,6 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 // bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
+import "./assets/scss/style.scss";
 
 // SB Admin
 import "./assets/vendor/sb-admin-2.min.css";

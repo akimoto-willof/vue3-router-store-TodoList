@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import AddTodo from "@/components/AddTodo.vue";
-import CardList from "@/components/CardList.vue";
+import AddTodo from "../components/AddTodo.vue";
+import CardList from "../components/CardList.vue";
 
 export default {
     components: {
