@@ -11,6 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 // bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
+import "./assets/scss/style.scss";
 
 // SB Admin
 import "./assets/vendor/sb-admin-2.min.css";
@@ -20,6 +21,3 @@ library.add(fas, faLeaf);
 dom.watch();
 
 createApp(App).component("font-awesome-icon", FontAwesomeIcon).use(store).use(router).mount("#app");
-import "./assets/scss/style.scss";
-
-console.log("hello");

@@ -5,25 +5,28 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const { VueLoaderPlugin } = require("vue-loader");
 
-
 module.exports = {
     mode: "development",
     entry: "./src/main.js",
     output: {
-        path: path.resolve(__dirname, "./public"),
-        filename: "./vue/main.js",
+        path: `${__dirname}/dist`,
+        filename: "main.js",
+    },
+    devServer: {
+        static: [
+            {
+                directory: `${__dirname}/public`,
+            },
+            {
+                directory: `${__dirname}/dist`,
+            },
+        ],
+        headers: {
+            "Access-Control-Allow-Origin": "*",
+        },
     },
     module: {
         rules: [
-            {
-                test: /\.vue$/,
-                exclude: /node_modules/,
-                use: [
-                    {
-                        loader: "vue-loader",
-                    },
-                ],
-            },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
@@ -33,6 +36,15 @@ module.exports = {
                         options: {
                             presets: ["@babel/preset-env"],
                         },
+                    },
+                ],
+            },
+            {
+                test: /\.vue$/,
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: "vue-loader",
                     },
                 ],
             },
@@ -79,6 +91,9 @@ module.exports = {
         new webpack.DefinePlugin({
             __VUE_OPTIONS_API__: true,
             __VUE_PROD_DEVTOOLS__: false,
+            "process.env": {
+                NODE_ENV: JSON.stringify(process.env.NODE_ENV || "development"),
+            },
         }),
     ],
 };
