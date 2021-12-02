@@ -9,16 +9,13 @@ module.exports = {
     mode: "development",
     entry: "./src/main.js",
     output: {
-        path: `${__dirname}/dist`,
+        path: `${__dirname}/public`,
         filename: "main.js",
     },
     devServer: {
         static: [
             {
                 directory: `${__dirname}/public`,
-            },
-            {
-                directory: `${__dirname}/dist`,
             },
         ],
         headers: {

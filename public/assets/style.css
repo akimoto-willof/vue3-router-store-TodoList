@@ -1,5 +1,5 @@
 /*!****************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-2.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[6].use[0]!./src/components/CardList.vue?vue&type=style&index=0&id=d8abbe04&scoped=true&lang=css ***!
+  !*** css ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-2.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[7].use[0]!./src/components/CardList.vue?vue&type=style&index=0&id=d8abbe04&scoped=true&lang=css ***!
   \****************************************************************************************************************************************************************************************************************************************************************************************************************************/
 .card.is-animated[data-v-d8abbe04] {
   animation: fadeup-d8abbe04 1s cubic-bezier(0.33, 1, 0.68, 1) 1 forwards;
@@ -8079,6 +8079,12 @@ textarea.form-control-lg {
     display: none !important; } }
 
 /*# sourceMappingURL=bootstrap.min.css.map */
+
+/*!*********************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-2.use[1]!./node_modules/sass-loader/dist/cjs.js!./src/assets/scss/style.scss ***!
+  \*********************************************************************************************************************************************/
+.color {
+  color: aliceblue; }
 
 /*!*******************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-2.use[1]!./node_modules/sass-loader/dist/cjs.js!./src/assets/vendor/sb-admin-2.min.css ***!
@@ -16204,10 +16210,4 @@ footer.sticky-footer .copyright {
 
 body.sidebar-toggled footer.sticky-footer {
   width: 100%; }
-
-/*!*********************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-2.use[1]!./node_modules/sass-loader/dist/cjs.js!./src/assets/scss/style.scss ***!
-  \*********************************************************************************************************************************************/
-.color {
-  color: aliceblue; }
 
