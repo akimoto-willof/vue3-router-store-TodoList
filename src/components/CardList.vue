@@ -1,19 +1,22 @@
 <template>
-    <div class="card shadow mb-2 is-animated">
-        <a href="#" class="d-block card-header py-3" role="button" @click="showDetail = !showDetail">
-            <h6 class="m-0 font-weight-bold text-primary">
-                {{ todoTitle }}
-                <font-awesome-icon :icon="showDetail ? 'angle-down' : 'angle-right'" />
-            </h6>
-        </a>
-        <div class="collapse show" v-if="showDetail">
-            <div class="card-body">{{ todoDetail }}</div>
+    <template v-for="item in todoData" :key="todo">
+        <div class="card shadow mb-2 is-animated">
+            <a href="#" class="d-block card-header py-3" role="button" @click="showDetail = !showDetail">
+                <h6 class="m-0 font-weight-bold text-primary">
+                    {{ item.title }}
+                    <font-awesome-icon :icon="showDetail ? 'angle-down' : 'angle-right'" />
+                </h6>
+            </a>
+            <div class="collapse show" v-if="showDetail">
+                <div class="card-body">{{ item.detail }}</div>
+            </div>
         </div>
-    </div>
+    </template>
 </template>
 
 <script>
 import { ref } from "vue";
+import { useStore } from "vuex";
 
 export default {
     props: {
@@ -28,9 +31,12 @@ export default {
     },
     setup(props) {
         const showDetail = ref(true);
+        const store = useStore();
+        const todoData = ref(store.state.todo);
 
         return {
             showDetail,
+            todoData,
         };
     },
 };
