@@ -1,13 +1,12 @@
 <template>
     <template v-for="item in todoData" :key="todo">
         <div class="card shadow mb-2 is-animated">
-            <a href="#" class="d-block card-header py-3" role="button" @click="showDetail = !showDetail">
+            <a class="d-block card-header py-3" role="button">
                 <h6 class="m-0 font-weight-bold text-primary">
                     {{ item.title }}
-                    <font-awesome-icon :icon="showDetail ? 'angle-down' : 'angle-right'" />
                 </h6>
             </a>
-            <div class="collapse show" v-if="showDetail">
+            <div>
                 <div class="card-body">{{ item.detail }}</div>
             </div>
         </div>
@@ -19,23 +18,11 @@ import { ref } from "vue";
 import { useStore } from "vuex";
 
 export default {
-    props: {
-        todoTitle: {
-            type: String,
-            default: "ここにタイトル",
-        },
-        todoDetail: {
-            type: String,
-            default: "ここに内容が入ります。",
-        },
-    },
     setup(props) {
-        const showDetail = ref(true);
         const store = useStore();
         const todoData = ref(store.state.todo);
 
         return {
-            showDetail,
             todoData,
         };
     },
